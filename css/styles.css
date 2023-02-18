@@ -5,7 +5,11 @@
   --secondary-background-color: #f4f4fd; /* CLOUD */
   --accent-color-focus: #404bbf; /* OCEAN */
   --border-color: #e7e9fc; /* CORNFLOWER */
+  --secondary-border-color: #8e8f99; /* LIGHT SLATE */
   --invert-white-color: #fff; /* WHITE */
+  --icon-color-grey: #afb1b8;
+  --background-icon-secondary: rgba(255, 255, 255, 0.1);
+  ----background-icon-accent: #31d0aa;
 }
 
 body {
@@ -40,6 +44,19 @@ img {
   width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.icon-container {
+  width: 264px;
+  height: 112px;
+  margin-bottom: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--secondary-background-color);
+  border-radius: 4px;
 }
 
 .visually-hidden {
@@ -153,12 +170,26 @@ img {
 }
 
 /* Hero */
+.section .hero {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .hero {
   padding-top: 188px;
   padding-bottom: 188px;
 
   text-align: center;
-  background-color: #2e2f42;
+  background-color: var(--primary-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .hero-title {
@@ -213,7 +244,6 @@ img {
   justify-content: center;
   flex-grow: 1;
   gap: 24px;
-  flex-basis: calc((100% - 24px) /);
 }
 
 .item-name {
@@ -221,6 +251,11 @@ img {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+}
+
+.benefit-icons {
+  /* width: 64px;
+  height: 64px; */
 }
 
 /* About section */
@@ -266,7 +301,7 @@ img {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 
-  margin-bottom: 0;
+  margin-bottom: 8px;
 }
 
 .team-list {
@@ -287,6 +322,10 @@ img {
 
 .portfolio {
   padding-top: 96px;
+}
+
+.portfoliio-img {
+  margin-bottom: 0;
 }
 
 .section .portfolio {
@@ -317,6 +356,11 @@ img {
 .portfolio-button:focus {
   color: var(--invert-white-color);
   background-color: var(--accent-color-focus);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  border-color: transparent;
+
   cursor: pointer;
 }
 
@@ -358,4 +402,129 @@ img {
   width: 264px;
   margin-top: 16px;
   margin-bottom: 0;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-title {
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--invert-white-color);
+  letter-spacing: 0.02em;
+}
+
+.footer-page {
+  display: flex;
+  gap: 120px;
+}
+
+.footer-media {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-social-list {
+  display: flex;
+
+  gap: 16px;
+}
+
+.footer-socials-item {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-icon-secondary);
+  border-radius: 50%;
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+  background-color: var(----background-icon-accent);
+}
+
+.footer-socials-icon {
+  fill: var(--secondary-background-color);
+}
+
+/* Socials */
+.socials-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.socials-item {
+  width: 40px;
+  height: 40px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  fill: var(--secondary-background-color);
+  border-radius: 50%;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--accent-color-focus);
+}
+
+/* Customers */
+.customers-section {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+
+.customers-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 72px;
+}
+
+.customers-item {
+  width: 468px;
+  height: 88px;
+  border: 1px solid var(--secondary-border-color);
+  border-radius: 4px;
+}
+
+.customers-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.customers-icon {
+  fill: var(--secondary-border-color);
+}
+
+.customers-item:hover,
+.customers-item:focus {
+  border-color: var(--accent-color-focus);
+}
+.customers-icon:hover,
+.customers-icon:focus {
+  fill: var(--accent-color-focus);
 }
